@@ -55,36 +55,10 @@
             z-index: 20;
         }
 
-        /* --- Audio Player Floating Bar --- */
-        .audio-player-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-            background: rgba(255, 255, 255, 0.95);
-            border: 3px solid var(--candy-pink);
-            border-radius: 30px;
-            padding: 8px 16px;
-            box-shadow: 0 8px 25px rgba(236, 64, 122, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            backdrop-filter: blur(5px);
-        }
-
-        .audio-player-container label {
-            font-family: 'Fredoka', cursive;
-            color: var(--candy-pink);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-        }
-
-        .audio-player-container audio {
-            height: 32px;
-            outline: none;
+        /* --- Hidden Contact Form Attributes Container --- */
+        .hidden-contact-data {
+            display: none !important;
+            visibility: hidden;
         }
 
         /* --- Navigation --- */
@@ -362,7 +336,8 @@
         .contact-card p {
             text-align: center;
             margin-bottom: 25px;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: bold;
         }
 
         .contact-form {
@@ -412,23 +387,12 @@
             .nav-wrapper { flex-direction: column; gap: 10px; text-align: center; }
             .story-card { padding: 25px; }
             .logo-box { width: 180px; height: 180px; }
-            .audio-player-container { bottom: 10px; right: 10px; padding: 6px 12px; }
         }
     </style>
 </head>
 <body>
 
     <canvas id="effectsCanvas"></canvas>
-
-    <!-- Floating Audio Control Widget -->
-    <div class="audio-player-container">
-        <label for="nurseryAudio"><i class="fa-solid fa-music"></i> Ladybug Song 🐞:</label>
-        <audio id="nurseryAudio" controls loop autoplay>
-            <source src="https://raw.githubusercontent.com/huda4ever1/bbk-daycare/main/ladybug.mp3" type="audio/mpeg">
-            <source src="ladybug.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
 
     <!-- Navigation -->
     <nav class="top-nav">
@@ -539,7 +503,7 @@
             <div class="schedule-list">
                 <div class="schedule-item">
                     <span class="schedule-time">07:00 AM - 08:30 AM</span>
-                    <span class="schedule-desc">Warm Welcome, Morning Greeting & Soft Music</span>
+                    <span class="schedule-desc">Warm Welcome, Morning Greeting & Play</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">08:30 AM - 09:30 AM</span>
@@ -564,4 +528,30 @@
                 <div class="schedule-item">
                     <span class="schedule-time">02:00 PM - 03:00 PM</span>
                     <span class="schedule-desc">Early Math, Counting & Shape Recognition</span>
-                </
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">03:00 PM - 04:00 PM</span>
+                    <span class="schedule-desc">Creative Painting, Drawing & Fine Motor Arts</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">04:00 PM - 05:00 PM</span>
+                    <span class="schedule-desc">Music, Dancing, Singing & Movement</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">05:00 PM - 06:00 PM</span>
+                    <span class="schedule-desc">Free Discovery Play & Family Pickup Time</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-card" id="contact">
+            <h2>Send Private Message to BBK 💌</h2>
+            <p>Contact BBK to let me receive message and email to my phone and email</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xvovgzqg" method="POST">
+                <!-- Hidden Contact Data (Email & Phone) -->
+                <input type="hidden" name="_to" value="huda4ever1@gmail.com" class="hidden-contact-data">
+                <input type="hidden" name="Forward_SMS_To" value="2028135994" class="hidden-contact-data">
+                
+                <input type="text" name="Parent_Name" placeholder="Your Fu
