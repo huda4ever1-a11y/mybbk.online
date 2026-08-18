@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBK Home Daycare - Bright Beginnings Kids, Lake Ridge VA</title>
+    <title>Bright Beginnings Kids (BBK) Home Daycare - Lake Ridge VA</title>
     
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ==========================================================================
-           1. CORE VARIABLES & REETS
-           ========================================================================== */
         :root {
-            --primary-red: #FF5964;
-            --secondary-yellow: #FFAD05;
-            --accent-blue: #35A7FF;
-            --purple: #9B51E0;
-            --green: #27AE60;
-            --soft-blue: #EBF5FF;
-            --bg-light: #FFF9F2;
+            --sun-yellow: #FFC72C;
+            --coral-red: #FF5252;
+            --sky-blue: #29B6F6;
+            --mint-green: #26A69A;
+            --candy-pink: #EC407A;
+            --purple-accent: #AB47BC;
+            --bg-yellow: #FFFDE7;
             --text-dark: #2C3E50;
-            --text-light: #7F8C8D;
-            --nav-bg: #E0F2FE;
+            --text-light: #607D8B;
         }
 
         * {
@@ -34,25 +30,49 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--bg-yellow);
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* ==========================================================================
-           2. NAVIGATION BAR
-           ========================================================================== */
+        /* --- Audio Floating Button --- */
+        .audio-control {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            background: var(--candy-pink);
+            color: white;
+            border: 3px solid white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-family: 'Fredoka', cursive;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .audio-control:hover {
+            transform: scale(1.08);
+        }
+
+        /* --- Navigation --- */
         .top-nav {
-            background-color: var(--nav-bg);
+            background-color: #E1F5FE;
             padding: 12px 0;
-            border-bottom: 2px solid #D0E8FF;
+            border-bottom: 3px dashed var(--sky-blue);
         }
 
         .nav-wrapper {
@@ -64,7 +84,7 @@
 
         .main-nav {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             list-style: none;
         }
 
@@ -73,60 +93,28 @@
             color: var(--text-dark);
             font-weight: 700;
             font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-
-        .main-nav a:hover {
-            color: var(--accent-blue);
-        }
-
-        .user-nav {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .user-nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 700;
         }
 
         .contact-btn {
-            background-color: var(--primary-red);
+            background-color: var(--coral-red);
             color: white !important;
             padding: 10px 22px;
             border-radius: 25px;
             font-weight: bold;
-            transition: transform 0.3s, background 0.3s;
-            display: inline-block;
-            box-shadow: 0 4px 10px rgba(255, 89, 100, 0.3);
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(255, 82, 82, 0.3);
         }
 
-        .contact-btn:hover {
-            background-color: #E04A54;
-            transform: scale(1.05);
-        }
-
-        .follow-us {
-            text-align: right;
-            padding: 8px 0;
-            font-weight: bold;
-            font-size: 0.95rem;
-        }
-
-        /* ==========================================================================
-           3. HEADER & CARTOON LOGO SECTION
-           ========================================================================== */
+        /* --- Header & Animated Sun Logo --- */
         header {
-            background: linear-gradient(-45deg, var(--secondary-yellow), var(--primary-red), var(--purple), var(--accent-blue));
+            background: linear-gradient(-45deg, #FFD54F, #FF5252, #AB47BC, #29B6F6);
             background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
+            animation: gradientBG 10s ease infinite;
             color: white;
             text-align: center;
-            padding: 45px 20px;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
+            padding: 40px 20px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
@@ -136,266 +124,217 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Cartoon Floating Logo Container */
-        .logo-container {
+        .logo-box {
             margin: 0 auto 15px;
-            width: 160px;
-            height: 160px;
+            width: 220px;
+            height: 220px;
             background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 6px solid var(--accent-blue);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border: 6px stroke var(--sky-blue);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             animation: floatLogo 3.5s ease-in-out infinite;
+            padding: 10px;
         }
 
         @keyframes floatLogo {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(3deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
         }
 
-        .cartoon-logo-svg {
-            width: 85%;
+        .logo-svg {
+            width: 100%;
             height: auto;
         }
 
-        .subtitle {
+        .tagline {
             font-size: 1.3rem;
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.3);
             display: inline-block;
             padding: 10px 25px;
             border-radius: 30px;
             backdrop-filter: blur(8px);
             font-weight: 700;
             font-family: 'Fredoka', cursive;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* ==========================================================================
-           4. HERO BANNER
-           ========================================================================== */
-        .hero-banner {
-            background-color: white;
-            border-radius: 25px;
-            padding: 40px;
-            text-align: center;
-            margin: 40px 0;
-            border: 4px dashed var(--purple);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        }
-
-        .hero-banner h2 {
-            font-family: 'Fredoka', cursive;
-            color: var(--primary-red);
-            font-size: 2.3rem;
-            margin-bottom: 12px;
-        }
-
-        .hero-banner p {
-            color: var(--text-dark);
-            max-width: 650px;
-            margin: 0 auto 25px;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .start-btn {
-            background-color: var(--secondary-yellow);
-            color: var(--text-dark);
-            padding: 15px 35px;
+        /* --- Mom & Teacher Care Story Section --- */
+        .story-card {
+            background: white;
             border-radius: 30px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.2rem;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 173, 5, 0.4);
-            animation: bounceBtn 2.5s infinite;
+            padding: 40px;
+            margin: 40px 0;
+            border: 4px dashed var(--sun-yellow);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        @keyframes bounceBtn {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
+        .story-text {
+            flex: 1;
+            min-width: 280px;
         }
 
-        /* ==========================================================================
-           5. CARTOON DANCING GALLERY
-           ========================================================================== */
+        .story-text h2 {
+            font-family: 'Fredoka', cursive;
+            color: var(--coral-red);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .badge-grid {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .badge-item {
+            background: var(--sky-blue);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-family: 'Fredoka', cursive;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* --- Cartoon Photo Gallery Grid --- */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
 
         .gallery-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-            border: 3px solid #F0F0F0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 4px solid white;
+            transition: transform 0.3s ease;
         }
 
         .gallery-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.12);
-            border-color: var(--accent-blue);
         }
 
         .gallery-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
-            border-bottom: 4px solid var(--accent-blue);
             transition: transform 0.4s ease;
         }
 
-        /* Dancing picture animation when hovering over card */
         .gallery-card:hover img {
             animation: dancePic 1.2s ease-in-out infinite alternate;
         }
 
         @keyframes dancePic {
             0% { transform: scale(1.05) rotate(0deg); }
-            30% { transform: scale(1.08) rotate(-3deg); }
-            70% { transform: scale(1.08) rotate(3deg); }
-            100% { transform: scale(1.05) rotate(0deg); }
+            50% { transform: scale(1.08) rotate(-3deg); }
+            100% { transform: scale(1.05) rotate(3deg); }
         }
 
-        .gallery-content {
+        .gallery-info {
             padding: 20px;
             text-align: center;
         }
 
-        .gallery-content h3 {
+        .gallery-info h3 {
             font-family: 'Fredoka', cursive;
-            font-size: 1.25rem;
-            color: var(--text-dark);
+            color: var(--purple-accent);
             margin-bottom: 8px;
         }
 
-        .gallery-content p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* ==========================================================================
-           6. SCHEDULE TABLE & ANIMATED ICONS
-           ========================================================================== */
-        .schedule-section {
+        /* --- Full Daily Schedule (7 AM to 6 PM) --- */
+        .schedule-box {
             background: white;
             padding: 40px;
-            border-radius: 30px;
+            border-radius: 35px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             margin-bottom: 50px;
+            border: 4px stroke var(--mint-green);
         }
 
         .schedule-title {
             font-family: 'Fredoka', cursive;
             text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-red);
-            margin-bottom: 30px;
+            font-size: 2.3rem;
+            color: var(--coral-red);
+            margin-bottom: 25px;
         }
 
-        .schedule-table-wrapper {
-            overflow-x: auto;
+        .schedule-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
         }
 
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
+        .schedule-item {
+            background: #F4FBFB;
+            border-left: 6px solid var(--mint-green);
+            padding: 15px 20px;
             border-radius: 15px;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        .schedule-table th, .schedule-table td {
-            padding: 18px 12px;
-            text-align: center;
-        }
-
-        .schedule-table th {
-            background-color: var(--accent-blue);
-            color: white;
-            font-size: 1.05rem;
-            font-family: 'Fredoka', cursive;
-        }
-
-        .schedule-table th.time-col { 
-            background-color: #E2E8F0; 
-            color: var(--text-dark); 
-        }
-
-        .schedule-table tr:nth-child(even) {
-            background-color: #F8FAFC;
-        }
-
-        .schedule-table tr:hover {
-            background-color: var(--soft-blue);
-        }
-
-        .schedule-icon {
-            display: block;
-            margin: 0 auto 10px;
-            max-width: 50px;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .schedule-table td:hover .schedule-icon {
-            animation: spinWiggle 0.8s ease-in-out;
-        }
-
-        @keyframes spinWiggle {
-            0% { transform: scale(1) rotate(0deg); }
-            30% { transform: scale(1.2) rotate(-12deg); }
-            60% { transform: scale(1.2) rotate(12deg); }
-            100% { transform: scale(1) rotate(0deg); }
-        }
-
-        .time-badge {
-            background: var(--secondary-yellow);
+        .schedule-time {
+            background: var(--sun-yellow);
             color: var(--text-dark);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 800;
-            display: inline-block;
+            font-family: 'Fredoka', cursive;
+            padding: 6px 12px;
+            border-radius: 12px;
             font-size: 0.9rem;
+            white-space: nowrap;
         }
 
-        /* ==========================================================================
-           7. PRIVATE CONTACT FORM
-           ========================================================================== */
-        .contact-section {
-            background: linear-gradient(-45deg, var(--accent-blue), var(--purple), var(--primary-red));
+        .schedule-desc {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* --- Contact Form --- */
+        .contact-card {
+            background: linear-gradient(-45deg, var(--sky-blue), var(--purple-accent), var(--candy-pink));
             background-size: 300% 300%;
-            animation: gradientBG 10s ease infinite;
+            animation: gradientBG 8s ease infinite;
             color: white;
             padding: 40px;
-            border-radius: 30px;
+            border-radius: 35px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        .contact-section h2 {
+        .contact-card h2 {
             font-family: 'Fredoka', cursive;
             text-align: center;
-            margin-bottom: 8px;
             font-size: 2.2rem;
+            margin-bottom: 10px;
         }
 
-        .contact-section p {
+        .contact-card p {
             text-align: center;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            margin-bottom: 25px;
             font-size: 1.1rem;
         }
 
         .contact-form {
-            max-width: 550px;
+            max-width: 580px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -404,169 +343,185 @@
 
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 14px 18px;
+            padding: 15px;
             border-radius: 15px;
-            border: 2px solid transparent;
+            border: none;
             font-size: 1rem;
             outline: none;
-            transition: border 0.3s ease;
-        }
-
-        .contact-form textarea { resize: none; }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--secondary-yellow);
         }
 
         .contact-form button {
-            background-color: var(--secondary-yellow);
+            background-color: var(--sun-yellow);
             color: var(--text-dark);
             font-family: 'Fredoka', cursive;
-            font-size: 1.25rem;
-            padding: 14px;
+            font-size: 1.3rem;
+            padding: 15px;
             border: none;
             border-radius: 15px;
             cursor: pointer;
-            transition: transform 0.2s ease, background 0.3s ease;
+            transition: transform 0.2s;
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .contact-form button:hover {
-            background-color: #E09700;
-            transform: translateY(-2px);
+            transform: scale(1.02);
         }
 
-        /* ==========================================================================
-           8. FOOTER
-           ========================================================================== */
         footer {
             text-align: center;
             padding: 30px;
             color: var(--text-light);
             font-weight: 700;
-            font-size: 0.95rem;
         }
 
-        /* ==========================================================================
-           9. RESPONSIVE MEDIA QUERIES
-           ========================================================================== */
         @media (max-width: 768px) {
-            .nav-wrapper { flex-direction: column; text-align: center; gap: 10px; }
-            .main-nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .logo-container { width: 130px; height: 130px; }
-            .subtitle { font-size: 1.1rem; }
-            .hero-banner h2 { font-size: 1.8rem; }
-            .schedule-section { padding: 20px 15px; }
+            .nav-wrapper { flex-direction: column; gap: 10px; text-align: center; }
+            .story-card { padding: 25px; }
+            .logo-box { width: 170px; height: 170px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Sound Toggle Button -->
+    <button class="audio-control" id="musicBtn" onclick="togglePlay()">
+        <i class="fa-solid fa-music"></i> <span id="musicText">Play Joyful Music 🎵</span>
+    </button>
+
+    <!-- Top Navigation Bar -->
     <nav class="top-nav">
         <div class="container nav-wrapper">
             <ul class="main-nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="#about">About Mom & Teacher</a></li>
+                <li><a href="#schedule">Daily Schedule</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="user-nav">
-                <a href="#">Log in</a>
-                <a href="#" class="contact-btn">Contact Now</a>
-            </div>
+            <a href="#contact" class="contact-btn">Contact Huda Now</a>
         </div>
     </nav>
-    <div class="container follow-us">Follow Us 🌈</div>
 
-    <!-- Header & Animated Cartoon Logo -->
+    <!-- Header & Exact Vector Logo -->
     <header>
-        <div class="logo-container">
-            <!-- Full Cartoon Character SVG Logo -->
-            <svg class="cartoon-logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background Glow Ring -->
-                <circle cx="60" cy="60" r="50" fill="#FFAD05"/>
+        <div class="logo-box">
+            <!-- Exact Replica Vector SVG Logo of Bright Beginnings Kids BBK -->
+            <svg class="logo-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Multi-Colored Sun Rays -->
+                <g id="sun-rays">
+                    <rect x="142" y="10" width="16" height="35" rx="8" fill="#FF5252"/>
+                    <rect x="142" y="125" width="16" height="35" rx="8" fill="#26A69A"/>
+                    <rect x="195" y="25" width="16" height="35" rx="8" fill="#29B6F6" transform="rotate(30 203 42)"/>
+                    <rect x="230" y="60" width="16" height="35" rx="8" fill="#26A69A" transform="rotate(60 238 77)"/>
+                    <rect x="245" y="110" width="16" height="35" rx="8" fill="#FF5252" transform="rotate(90 253 127)"/>
+                    <rect x="230" y="160" width="16" height="35" rx="8" fill="#29B6F6" transform="rotate(120 238 177)"/>
+                    <rect x="55" y="60" width="16" height="35" rx="8" fill="#FF5252" transform="rotate(-60 63 77)"/>
+                    <rect x="90" y="25" width="16" height="35" rx="8" fill="#29B6F6" transform="rotate(-30 98 42)"/>
+                    <rect x="40" y="110" width="16" height="35" rx="8" fill="#26A69A" transform="rotate(-90 48 127)"/>
+                </g>
                 
-                <!-- Decorative Cartoon Stars & Dots -->
-                <polygon points="20,25 23,31 29,31 24,35 26,41 20,37 14,41 16,35 11,31 17,31" fill="#35A7FF"/>
-                <polygon points="100,25 103,31 109,31 104,35 106,41 100,37 94,41 96,35 91,31 97,31" fill="#FF5964"/>
-                <circle cx="25" cy="85" r="5" fill="#9B51E0"/>
-                <circle cx="95" cy="85" r="5" fill="#27AE60"/>
+                <!-- Main Smiling Sun Center -->
+                <circle cx="150" cy="85" r="45" fill="#FFC72C" stroke="#FFA000" stroke-width="2"/>
+                <!-- Sun Eyes & Smiling Face -->
+                <path d="M128 78 Q135 70 142 78" fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M158 78 Q165 70 172 78" fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="125" cy="84" r="5" fill="#FF5252" opacity="0.6"/>
+                <circle cx="175" cy="84" r="5" fill="#FF5252" opacity="0.6"/>
+                <path d="M138 92 Q150 105 162 92" fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round"/>
+
+                <!-- White Outline Cloud Shape for Text -->
+                <path d="M40 180 C40 130, 260 130, 260 180 C280 200, 270 250, 230 260 C200 270, 100 270, 70 260 C30 250, 20 200, 40 180 Z" fill="#29B6F6" opacity="0.15"/>
                 
-                <!-- Cartoon Face / Head -->
-                <circle cx="60" cy="65" r="32" fill="#FFE0BD"/>
-                <circle cx="60" cy="65" r="32" fill="none" stroke="#2C3E50" stroke-width="3"/>
+                <!-- Kid Character with Star Badge -->
+                <g transform="translate(160, 95) scale(0.7)">
+                    <circle cx="30" cy="20" r="14" fill="#FFF" stroke="#29B6F6" stroke-width="3"/>
+                    <path d="M20 18 Q30 25 40 18" fill="none" stroke="#29B6F6" stroke-width="2"/>
+                    <path d="M18 42 L42 42 L38 60 L22 60 Z" fill="#EC407A"/>
+                    <polygon points="10,15 13,22 20,22 15,26 17,33 10,29 3,33 5,26 0,22 7,22" fill="#29B6F6"/>
+                </g>
+
+                <!-- Bright Beginnings Kids Text -->
+                <text x="150" y="175" text-anchor="middle" font-family="'Fredoka', cursive" font-weight="700" font-size="28px" fill="#1A237E">Bright</text>
+                <text x="150" y="205" text-anchor="middle" font-family="'Fredoka', cursive" font-weight="700" font-size="28px" fill="#1A237E">Beginnings Kids</text>
                 
-                <!-- Crown -->
-                <path d="M42 42 L46 26 L60 35 L74 26 L78 42 Z" fill="#FFAD05" stroke="#2C3E50" stroke-width="2.5" stroke-linejoin="round"/>
-                <circle cx="46" cy="26" r="3" fill="#FF5964"/>
-                <circle cx="60" cy="35" r="3" fill="#35A7FF"/>
-                <circle cx="74" cy="26" r="3" fill="#9B51E0"/>
-                
-                <!-- Big Expressive Cartoon Eyes -->
-                <ellipse cx="48" cy="62" rx="5" ry="7" fill="#2C3E50"/>
-                <ellipse cx="72" cy="62" rx="5" ry="7" fill="#2C3E50"/>
-                <circle cx="46" cy="60" r="2" fill="white"/>
-                <circle cx="70" cy="60" r="2" fill="white"/>
-                
-                <!-- Cheeks -->
-                <circle cx="40" cy="68" r="4" fill="#FF5964" opacity="0.5"/>
-                <circle cx="80" cy="68" r="4" fill="#FF5964" opacity="0.5"/>
-                
-                <!-- Big Happy Smile -->
-                <path d="M46 72 Q60 85 74 72" fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round"/>
-                
-                <!-- BBK Text Banner -->
-                <rect x="35" y="94" width="50" height="18" rx="9" fill="#FF5964" stroke="#2C3E50" stroke-width="2"/>
-                <text x="60" y="107" text-anchor="middle" font-family="'Fredoka', cursive" font-weight="700" font-size="11px" fill="white">BBK</text>
+                <!-- Colorful BBK Letters -->
+                <text x="85" y="265" font-family="'Fredoka', cursive" font-weight="700" font-size="55px" fill="#FFC72C">B</text>
+                <text x="135" y="265" font-family="'Fredoka', cursive" font-weight="700" font-size="55px" fill="#29B6F6">B</text>
+                <text x="185" y="265" font-family="'Fredoka', cursive" font-weight="700" font-size="55px" fill="#EC407A">K</text>
             </svg>
         </div>
-        <div class="subtitle">Luxury Safe & Loving Home 👑 Lake Ridge VA</div>
+        <div class="tagline">Luxury Safe & Loving Home Daycare 👑 Lake Ridge, VA</div>
     </header>
 
     <div class="container">
 
-        <!-- Hero Section -->
-        <div class="hero-banner">
-            <h2>BBK Home Daycare</h2>
-            <p>Enjoy happy, high-quality cartoon moments — safe, clean, and truly luxurious for your children.</p>
-            <a href="#" class="start-btn">Start Now Here</a>
-        </div>
+        <!-- Mom & Experienced Teacher Care Story -->
+        <section class="story-card" id="about">
+            <div class="story-text">
+                <h2>More Than A Teacher — A Loving Mom 💖</h2>
+                <p>At <strong>Bright Beginnings Kids (BBK)</strong>, your child receives genuine motherly warmth combined with top-tier early education. I am not only a dedicated certified educator with a <strong>Bachelor's Degree in Education and 10 years of professional teaching experience</strong>, but I am also a proud mom of awesome kids!</p>
+                <p>We focus exclusively on children aged <strong>3 to 6 years old</strong>, maintaining an intimate class size capped at <strong>only 4 kids total</strong>. This guarantees maximum individual attention, emotional security, and customized learning tailored to your child's personality.</p>
+                <div class="badge-grid">
+                    <div class="badge-item"><i class="fa-solid fa-graduation-cap"></i> 10+ Years Experience</div>
+                    <div class="badge-item" style="background:var(--candy-pink);"><i class="fa-solid fa-heart"></i> Loving Mom's Touch</div>
+                    <div class="badge-item" style="background:var(--purple-accent);"><i class="fa-solid fa-users"></i> Max 4 Kids Only</div>
+                    <div class="badge-item" style="background:var(--mint-green);"><i class="fa-solid fa-child"></i> Ages 3 to 6 Years</div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Cartoon Dancing Gallery Cards -->
+        <!-- Animated Cartoon Photos Gallery -->
+        <h2 style="text-align: center; font-family:'Fredoka', cursive; color:var(--coral-red); font-size:2.2rem; margin-bottom:25px;">
+            Joyful Cartoon Learning Moments 🎨
+        </h2>
         <div class="gallery-grid">
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1620935398285-d85c8e312a0f?auto=format&fit=crop&q=80&w=600" alt="Cartoon teacher and kids learning">
-                <div class="gallery-content">
-                    <h3>Bachelor's Degree in Education</h3>
-                    <p>Expert teachers guiding kids through interactive, creative cartoon-style learning.</p>
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600" alt="Montessori learning toys">
+                <div class="gallery-info">
+                    <h3>Montessori Discovery</h3>
+                    <p>Hands-on sensory & motor skill exploration for ages 3–6.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1549410972-f67f6b9c9b4e?auto=format&fit=crop&q=80&w=600" alt="Small group reading session">
-                <div class="gallery-content">
-                    <h3>Only 4 Kids</h3>
-                    <p>Small group size ensuring individualized care, reading time, and focused attention.</p>
+                <img src="https://images.unsplash.com/photo-1549410972-f67f6b9c9b4e?auto=format&fit=crop&q=80&w=600" alt="Children reading books together">
+                <div class="gallery-info">
+                    <h3>Storytelling & Reading</h3>
+                    <p>Sparking imagination and early literacy in small cozy circles.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=600" alt="Children on playground">
-                <div class="gallery-content">
-                    <h3>First Aid & CPR Certified</h3>
-                    <p>Highest safety standards with certified, attentive supervision at all times.</p>
+                <img src="https://images.unsplash.com/photo-1620935398285-d85c8e312a0f?auto=format&fit=crop&q=80&w=600" alt="Teacher helping children art">
+                <div class="gallery-info">
+                    <h3>Creative Arts & Crafts</h3>
+                    <p>10 years of guided educational art programs to inspire creativity.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600" alt="Montessori activity area">
-                <div class="gallery-content">
-                    <h3>Montessori + Joyful Learning</h3>
-                    <p>A warm, cozy environment designed to spark curiosity and build independence.</p>
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=600" alt="Safe outdoor play area">
+                <div class="gallery-info">
+                    <h3>Safe Active Play</h3>
+                    <p>Clean, outdoor garden physical play and joyful group activities.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Schedule Table -->
-        <div class="schedule-section">
-            <h2 class="schedule-title">BBK Daily Learning Journey</h2>
-            <div class="schedule-table-wrapper">
-                <table class="sch
+        <!-- Full Daily Schedule (7 AM to 6 PM) -->
+        <section class="schedule-box" id="schedule">
+            <h2 class="schedule-title">BBK Full Daily Schedule (7:00 AM – 6:00 PM) ⏰</h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <span class="schedule-time">07:00 AM - 08:30 AM</span>
+                    <span class="schedule-desc">Warm Welcome, Morning Greeting & Soft Music</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">08:30 AM - 09:30 AM</span>
+                    <span class="schedule-desc">Circle Time: Calendar, Weather & Daily Story</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">09:30 AM - 10:30 AM</span>
+                    <span class="schedule-desc">Montessori Hands-on Learning Centers</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">10:30 AM - 11:30 AM</span>
+                    <span class="schedule-desc">Outdoor Fresh Air Play & Motor Skill Games</span>
+                </div>
+                <
