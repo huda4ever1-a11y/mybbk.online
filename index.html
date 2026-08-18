@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BBK Home Daycare | Premium Home Daycare in Washington DC Area</title>
-<link rel="icon" type="image/png" href="logo.png">
+<title>BBK Home Daycare | Luxury Home Daycare Washington DC Area</title>
+<link rel="icon" href="logo.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Fredoka:wght@600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#0a0a1a;color:white;overflow-x:hidden}
-.hero{
-background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 25%, #6BCB77 50%, #4D96FF 75%, #FF6B6B 100%);
-background-size:400% 400%;animation:rainbow 10s ease infinite;
-min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative}
+.hero{background:linear-gradient(135deg,#FF6B6B 0%,#FFD93D 25%,#6BCB77 50%,#4D96FF 75%,#FF6B6B 100%);background-size:400% 400%;animation:rainbow 10s ease infinite;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 20px;position:relative}
 @keyframes rainbow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.2)}
-.hero-content{position:relative;z-index:2;max-width:900px}
-.logo-wrap{width:180px;height:180px;background:white;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);border:6px solid white}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25)}
+.hero-content{position:relative;z-index:2;max-width:950px}
+.logo-wrap{width:195px;height:195px;background:white;border-radius:50%;margin:0 auto 22px;display:flex;align-items:center;justify-content:center;box-shadow:0 25px 70px rgba(0,0,0,0.45);border:8px solid white;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
 .logo-wrap img{width:85%;height:85%;object-fit:contain;border-radius:50%}
-.hero h1{font-family:'Fredoka',sans-serif;font-size:clamp(40px,7vw,72px);line-height:0.9;text-shadow:0 4px 20px rgba(0,0,0,0.3)}
-.hero h1 span{display:block}
-.hero .bbk{color:white;font-size:1.3em;letter-spacing:5px}
-.hero .daycare{color:#FFD93D}
-.hero p{font-size:clamp(18px,2.5vw,22px);margin:25px auto;max-width:650px;background:rgba(0,0,0,0.3);padding:15px 25px;border-radius:50px;backdrop-filter:blur(10px)}
-.badges{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:25px 0}
-.badge{background:white;color:#333;padding:10px 20px;border-radius:50px;font-weight:700;font-size:14px;box-shadow:0 5px 15px rgba(0,0,0,0.2)}
-.badge:nth-child(1){background:#FFD93D} .badge:nth-child(2){background:#6BCB77;color:white} .badge:nth-child(3){background:#4D96FF;color:white} .badge:nth-child(4){background:#FF6B6B;color:white}
-.btn{background:white;color:#FF6B6B;padding:18px 45px;border-radius:50px;font-weight:800;font-size:18px;border:none;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,0.3);transition:0.3s;text-decoration:none;display:inline-block;margin-top:10px}
-.btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 15px 40px rgba(0,0,0,0.4)}
-.section{padding:80px 20px;max-width:1100px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:40px}
-.card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,
+.hero h1{font-family:'Fredoka',sans-serif;font-size:clamp(48px,8vw,90px);line-height:0.85;text-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.bbk{color:white;letter-spacing:7px;display:block} .daycare{color:#FFD93D;display:block}
+.hero p{font-size:clamp(18px,2.5vw,22px);margin:28px auto;max-width:720px;background:rgba(0,0,0,0.4);padding:18px 30px;border-radius:50px;backdrop-filter:blur(12px);line-height:1.5}
+.badges{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin:32px 0}
+.badge{padding:12px 24px;border-radius:50px;font-weight:800;font-size:14px;box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+.badge:nth-child(1){background:#FFD93D;color:#222} .badge:nth-child(2){background:#6BCB77;color:white} .badge:nth-child(3){background:#4D96FF;color:white} .badge:nth-child(4){background:#FF6B6B;color:white}
+.btn{background:white;color:#FF6B6B;padding:20px 55px
