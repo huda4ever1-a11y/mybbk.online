@@ -1,282 +1,215 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="BBK Home Daycare — quality home daycare in Lake Ridge, VA. Open 7AM–6PM.">
-  <title>BBK Home Daycare | Best Daycare Lake Ridge VA 7AM-6PM</title>
-
-  <style>
-    /* Reset & base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #FFF8E1;
-      color: #222;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Layout */
-    a { color: inherit; }
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 10px;
-      top: 10px;
-      width: auto;
-      height: auto;
-      padding: 8px 12px;
-      background: #000;
-      color: #fff;
-      border-radius: 4px;
-      z-index: 9999;
-    }
-
-    .hero {
-      background: linear-gradient(135deg,#FF8A80,#FFD54F,#81C784,#64B5F6);
-      padding: 45px 20px;
-      text-align: center;
-      color: white;
-    }
-    .logo {
-      width: 190px;
-      height: 190px;
-      background: white;
-      border-radius: 50%;
-      margin: 0 auto 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 8px solid white;
-      box-shadow: 0 15px 40px rgba(0,0,0,.25);
-      overflow: hidden;
-    }
-    .logo img {
-      width: 88%;
-      height: auto;
-      border-radius: 50%;
-      display: block;
-    }
-
-    h1 { font-size: 48px; text-shadow: 0 4px 15px rgba(0,0,0,.25); line-height: 1.05; }
-    h1 .tagline { color: #FFF176; display: block; font-size: 24px; margin-top: 6px; }
-
-    .tag {
-      background: rgba(0,0,0,.25);
-      padding: 10px 20px;
-      border-radius: 50px;
-      display: inline-block;
-      margin: 12px 0;
-      font-size: 16px;
-    }
-    .hours {
-      background: #4D96FF;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      display: inline-block;
-      font-weight: 700;
-      font-size: 16px;
-      margin-left: 8px;
-    }
-
-    .badges span {
-      background: white;
-      color: #333;
-      padding: 9px 16px;
-      border-radius: 30px;
-      margin: 6px;
-      display: inline-block;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .container { max-width: 940px; margin: 0 auto; padding: 20px; }
-    .box {
-      background: white;
-      border-radius: 18px;
-      padding: 24px;
-      margin: 20px 0;
-      box-shadow: 0 8px 28px rgba(0,0,0,.10);
-    }
-    .box h2 { color: #FF6B6B; text-align: center; font-size: 26px; margin-bottom: 12px; }
-
-    .contact {
-      background: linear-gradient(135deg,#4D96FF,#6BCB77);
-      color: white;
-      border-radius: 14px;
-      padding: 20px;
-      text-align: center;
-    }
-    .contact a { color: white; text-decoration: none; font-size: 18px; display: block; margin: 8px 0; font-weight: 700; }
-
-    .btn {
-      background: white;
-      color: #4D96FF;
-      padding: 12px 20px;
-      border-radius: 40px;
-      display: inline-block;
-      margin: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-    }
-
-    .card { padding: 14px; border-radius: 12px; margin: 12px 0; background: #FFF8E1; border-left: 6px solid #FFD93D; }
-    .card.blue { background: #E3F2FD; border-color: #4D96FF; }
-    .card.green { background: #E8F5E9; border-color: #6BCB77; }
-    .card.pink { background: #FCE4EC; border-color: #FF6B6B; }
-
-    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .fun { padding: 16px; border-radius: 12px; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,.08); }
-
-    .ad {
-      background: linear-gradient(135deg,#FFF176,#FF8A80);
-      padding: 16px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 18px 0;
-      border: 3px dashed #FF6B6B;
-    }
-
-    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
-    th { background: #FF6B6B; color: white; padding: 10px; text-align: center; }
-    td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
-
-    input, textarea, select { width: 100%; padding: 12px; margin: 8px 0; border-radius: 10px; border: 2px solid #eee; font-size: 15px; }
-    button[type="submit"] {
-      background: linear-gradient(90deg,#FFD93D,#FF6B6B);
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    footer { background: #222; color: white; text-align: center; padding: 24px; margin-top: 12px; border-radius: 8px; }
-
-    /* Responsive */
-    @media (max-width: 720px) {
-      .grid2 { grid-template-columns: 1fr; }
-      h1 { font-size: 36px; }
-      .logo { width: 140px; height: 140px; }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="BBK Home Daycare — a nurturing, playful, and safe micro-class for ages 3–6 in Lake Ridge, VA. Class size: 4 children. Hours 7AM–6PM." />
+  <title>BBK Home Daycare — Small-class care for ages 3–6</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="hero" role="banner">
-    <div class="logo" aria-hidden="false">
-      <!-- Replace logo.png with your real logo file. Keep the alt meaningful. -->
-      <img src="logo.png" alt="BBK Home Daycare logo">
-    </div>
-
-    <h1>BBK <span class="tagline">HOME DAYCARE</span></h1>
-    <div class="badges" aria-hidden="true">
-      <span>Safe • Caring • Licensed</span>
-    </div>
-    <div style="margin-top:12px;">
-      <span class="tag" aria-hidden="true">Family-focused care in Lake Ridge, VA</span>
-      <span class="hours" aria-label="Hours open seven AM to six PM">7AM — 6PM</span>
-    </div>
-  </header>
-
-  <main id="main" class="container" role="main" aria-labelledby="services-heading">
-    <section class="box" aria-labelledby="services-heading">
-      <h2 id="services-heading">Our Services</h2>
-      <div class="grid2" role="list">
-        <article class="card blue" role="listitem" aria-labelledby="early-id">
-          <h3 id="early-id" style="font-size:18px;margin-bottom:6px;">Early Learning</h3>
-          <p>Age-appropriate activities, reading, play-based learning, and socialization.</p>
-        </article>
-
-        <article class="card green" role="listitem" aria-labelledby="meals-id">
-          <h3 id="meals-id" style="font-size:18px;margin-bottom:6px;">Healthy Meals</h3>
-          <p>Nutritious snacks and meals (or assist with meal plans per family requests).</p>
-        </article>
-
-        <article class="card pink" role="listitem" aria-labelledby="safety-id">
-          <h3 id="safety-id" style="font-size:18px;margin-bottom:6px;">Safety & Care</h3>
-          <p>CPR-certified caregivers, secure facility, and structured routines.</p>
-        </article>
-
-        <article class="card" role="listitem" aria-labelledby="play-id">
-          <h3 id="play-id" style="font-size:18px;margin-bottom:6px;">Play & Development</h3>
-          <p>Creative crafts, outdoor time, sensory play, and motor skill development.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="box" aria-labelledby="enroll-heading">
-      <h2 id="enroll-heading">Enrollment & Rates</h2>
-      <p style="text-align:center; margin-bottom:12px;">Open full-time and part-time spots. Contact for availability and pricing.</p>
-
-      <div class="ad" role="note">
-        <strong>Special:</strong> First week trial available — contact for details.
+  <div class="site" role="application" aria-label="BBK Home Daycare website">
+    <header class="hero" role="banner">
+      <div class="logo" aria-hidden="false" aria-label="BBK Home Daycare logo">
+        <!-- Simple friendly SVG logo — replace or keep -->
+        <svg width="78" height="78" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#FFD76A"/>
+              <stop offset="1" stop-color="#FF7AA2"/>
+            </linearGradient>
+          </defs>
+          <rect rx="20" width="100" height="100" fill="url(#g)"/>
+          <g transform="translate(14,18)" fill="#fff">
+            <circle cx="18" cy="18" r="6"></circle>
+            <path d="M6 44c0-8 12-12 22-12s22 4 22 12v6H6v-6z"></path>
+          </g>
+        </svg>
       </div>
 
-      <table role="table" aria-describedby="rates-desc">
-        <caption id="rates-desc" style="caption-side: top; text-align:left; padding-bottom:6px;">Sample rates (subject to change)</caption>
-        <thead>
-          <tr><th scope="col">Program</th><th scope="col">Weekly</th><th scope="col">Hours</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Infants</td><td>$350</td><td>7AM–5PM</td></tr>
-          <tr><td>Toddlers</td><td>$300</td><td>7AM–5PM</td></tr>
-          <tr><td>Preschool</td><td>$275</td><td>8AM–3PM</td></tr>
-        </tbody>
-      </table>
-    </section>
+      <div class="hero-text">
+        <h1>BBK Home Daycare</h1>
+        <p class="tagline">A gentle journey of learning and play — micro-class of 4 children (ages 3–6)</p>
+        <div class="meta">Licensed • CPR & First Aid trained • Family-centered care</div>
+      </div>
+    </header>
 
-    <section class="box contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact & Visit</h2>
-      <p>If you'd like to schedule a visit or ask about enrollment, please contact us:</p>
-      <a href="tel:+17035551234" aria-label="Call BBK Home Daycare">Call: (703) 555-1234</a>
-      <a href="mailto:info@bbkdaycare.example" aria-label="Email BBK Home Daycare">Email: info@bbkdaycare.example</a>
+    <main>
+      <!-- Left: content -->
+      <section class="card" aria-labelledby="daily-heading">
+        <h2 id="daily-heading">Our Daily Journey — Small Class, Big Heart 🌱</h2>
+        <p class="lede">At BBK we nurture curiosity, kindness, and independence in a cozy, secure environment. With a consistent class of up to 4 children (ages 3–6), each child receives focused attention and tailored learning.</p>
 
-      <form aria-label="Contact form" action="#" method="post" style="margin-top:14px; max-width:560px; margin-left:auto; margin-right:auto;">
-        <label for="name">Your name</label>
-        <input id="name" name="name" type="text" required placeholder="Full name">
+        <h3 class="section-title">Daily Activity Schedule</h3>
+        <p class="muted">Times are approximate and adjusted to the group's needs. Emojis show quick cues for each part of the day.</p>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required placeholder="your@email.com">
+        <div class="schedule" aria-label="Daily schedule">
+          <div class="slot" role="group" aria-label="7:00 to 8:00 arrival and free play">
+            <div class="time">7:00–8:00</div>
+            <div class="content">
+              <h4>Arrival & Free Play ☀️</h4>
+              <p class="muted">Gentle greetings, unpacking, choice-based play (blocks, sensory bins) to ease into the day.</p>
+            </div>
+            <div class="thumb"><img src="images/arrival.jpg" alt="Children arriving and playing quietly"></div>
+          </div>
 
-        <label for="phone">Phone (optional)</label>
-        <input id="phone" name="phone" type="tel" placeholder="(703) 555-1234">
+          <div class="slot" role="group" aria-label="8:00 to 9:00 breakfast and circle time">
+            <div class="time">8:00–9:00</div>
+            <div class="content">
+              <h4>Breakfast & Circle Time 🍓📚</h4>
+              <p class="muted">Family-style snack or breakfast; morning song, calendar chat, and language-rich story time.</p>
+            </div>
+            <div class="thumb"><img src="images/breakfast.jpg" alt="Children enjoying breakfast together"></div>
+          </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+          <div class="slot" role="group" aria-label="9:00 to 10:00 outdoor play">
+            <div class="time">9:00–10:00</div>
+            <div class="content">
+              <h4>Outdoor Play & Gross Motor 🌳</h4>
+              <p class="muted">Fresh air, climbing, obstacle play, and cooperative games to build confidence and coordination.</p>
+            </div>
+            <div class="thumb"><img src="images/outdoor.jpg" alt="Outdoor play area with children"></div>
+          </div>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+          <div class="slot" role="group" aria-label="10:00 to 11:00 creative arts">
+            <div class="time">10:00–11:00</div>
+            <div class="content">
+              <h4>Creative Arts 🎨</h4>
+              <p class="muted">Open-ended art, music, and sensory exploration — process-focused activities to encourage expression.</p>
+            </div>
+            <div class="thumb"><img src="images/art.jpg" alt="Children painting and crafting"></div>
+          </div>
 
-  <footer role="contentinfo" class="container" aria-label="Footer">
-    <div class="box" style="background:transparent; box-shadow:none; padding:0;">
-      <p style="color:#ddd; margin-bottom:6px;">© <span id="year"></span> BBK Home Daycare — Lake Ridge, VA</p>
-      <p style="color:#ddd; font-size:13px;">Licensed & insured. Hours: 7AM–6PM. Address & directions available on request.</p>
-    </div>
-  </footer>
+          <div class="slot" role="group" aria-label="11:00 to 11:45 learning centers">
+            <div class="time">11:00–11:45</div>
+            <div class="content">
+              <h4>Learning Centers & Social Play 🧩</h4>
+              <p class="muted">Small rotating centers emphasizing early literacy, math concepts, and pretend play for social skills.</p>
+            </div>
+            <div class="thumb"><img src="images/centers.jpg" alt="Learning centers and toys"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="11:45 to 12:30 lunch">
+            <div class="time">11:45–12:30</div>
+            <div class="content">
+              <h4>Lunch & Quiet Social Time 🍽️</h4>
+              <p class="muted">Family-style dining, conversation, and supportive feeding for developing independence.</p>
+            </div>
+            <div class="thumb"><img src="images/lunch.jpg" alt="Children eating lunch together"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="12:30 to 2:30 nap time">
+            <div class="time">12:30–2:30</div>
+            <div class="content">
+              <h4>Nap / Rest Time 😴</h4>
+              <p class="muted">Quiet, dim environment with calming music. Supervised rest with optional quiet activities for non-nappers.</p>
+            </div>
+            <div class="thumb"><img src="images/nap.jpg" alt="Nap area with rest mats"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="2:30 to 3:30 snack and story">
+            <div class="time">2:30–3:30</div>
+            <div class="content">
+              <h4>Snack & Story Time 📖</h4>
+              <p class="muted">Light snack and engaging read-alouds; language development through questions and puppetry.</p>
+            </div>
+            <div class="thumb"><img src="images/snack.jpg" alt="Snack and story time"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="3:30 to 4:30 STEM and sensory">
+            <div class="time">3:30–4:30</div>
+            <div class="content">
+              <h4>STEM & Sensory 🔬</h4>
+              <p class="muted">Simple experiments, building, and sensory tables to spark curiosity and problem-solving.</p>
+            </div>
+            <div class="thumb"><img src="images/stem.jpg" alt="Kids doing STEM activity"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="4:30 to 5:30 movement and music">
+            <div class="time">4:30–5:30</div>
+            <div class="content">
+              <h4>Movement & Music 🎶</h4>
+              <p class="muted">Dance, instrument play, and circle games to end the day on a joyful note.</p>
+            </div>
+            <div class="thumb"><img src="images/music.jpg" alt="Music and movement time"></div>
+          </div>
+
+          <div class="slot" role="group" aria-label="5:30 to 6:00 wind-down and pick-up">
+            <div class="time">5:30–6:00</div>
+            <div class="content">
+              <h4>Wind-down & Pick-up 🌇</h4>
+              <p class="muted">Sharing moments, quick updates to caregivers, and smooth handoffs to families.</p>
+            </div>
+            <div class="thumb"><img src="images/pickup.jpg" alt="Parent picking up child"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: contact & gallery -->
+      <aside class="side">
+        <div class="card contact">
+          <h3>Enrollment & Contact ✨</h3>
+          <p class="muted">We welcome inquiries and tours. Class size is intentionally small — up to 4 children, ages 3–6, ensuring personalized care.</p>
+
+          <!-- Click-to-call and SMS -->
+          <div class="contact-cta">
+            <a class="btn primary" href="tel:+12028135994" aria-label="Call BBK Home Daycare">(202) 813‑5994 — Call to schedule a tour</a>
+            <a class="btn secondary" href="sms:+12028135994" aria-label="Text BBK Home Daycare">Text (202) 813‑5994</a>
+          </div>
+
+          <p class="muted" style="margin-top:10px">Hours: Mon–Fri • 7AM–6PM</p>
+
+          <details style="margin-top:12px">
+            <summary style="cursor:pointer">Send a message (optional)</summary>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" aria-label="Contact form">
+              <!-- Replace the action with your Formspree endpoint or remove the form -->
+              <label for="fname">Your name</label>
+              <input id="fname" name="name" required placeholder="Full name">
+
+              <label for="fphone">Phone</label>
+              <input id="fphone" name="phone" placeholder="(202) 813-5994">
+
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="4" required placeholder="Tell us a little about your child or ask a question"></textarea>
+
+              <button type="submit" class="btn primary">Send message</button>
+            </form>
+            <p class="muted" style="font-size:13px;margin-top:8px">Tip: For GitHub Pages use Formspree (replace the action URL) or delete this form and rely on direct calls/texts.</p>
+          </details>
+        </div>
+
+        <div class="card gallery" aria-hidden="false" style="margin-top:14px">
+          <h4>Gallery 📸</h4>
+          <div class="grid">
+            <img src="images/playground.jpg" alt="Playground area">
+            <img src="images/art.jpg" alt="Art activity">
+            <img src="images/sensory.jpg" alt="Sensory play">
+            <img src="images/reading.jpg" alt="Reading corner">
+            <img src="images/outdoor2.jpg" alt="Outdoor exploration">
+            <img src="images/nap2.jpg" alt="Nap/rest mats">
+          </div>
+          <p class="muted" style="font-size:13px;margin-top:8px">Replace these placeholders with your own photos in the images/ folder.</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4>Why BBK?</h4>
+          <ul class="benefits">
+            <li>• Micro-class of up to 4 children — individualized attention</li>
+            <li>• Experienced caregivers with a gentle, play-based curriculum</li>
+            <li>• Close partnership with families and daily notes</li>
+            <li>• Safe, calm space for growth</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p class="muted">© <span id="year"></span> BBK Home Daycare — Lake Ridge, VA • Licensed & insured</p>
+    </footer>
+  </div>
 
   <script>
-    // Small enhancement: sets current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Note: For GitHub Pages you may want to remove inline scripts if using strict CSP.
   </script>
 </body>
 </html>
