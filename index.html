@@ -55,12 +55,6 @@
             z-index: 20;
         }
 
-        /* --- Hidden Contact Form Attributes Container --- */
-        .hidden-contact-data {
-            display: none !important;
-            visibility: hidden;
-        }
-
         /* --- Navigation --- */
         .top-nav {
             background-color: #E1F5FE;
@@ -168,6 +162,28 @@
             backdrop-filter: blur(8px);
             font-weight: 700;
             font-family: 'Fredoka', cursive;
+        }
+
+        .contact-banner {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-pill {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         /* --- Story Section --- */
@@ -333,11 +349,27 @@
             margin-bottom: 10px;
         }
 
-        .contact-card p {
+        .contact-details-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 20px;
             text-align: center;
             margin-bottom: 25px;
-            font-size: 1.15rem;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-details-box a {
+            color: white;
+            text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .contact-form {
@@ -413,6 +445,11 @@
             <img src="logo.png" alt="Bright Beginnings Kids BBK Logo" class="logo-img">
         </div>
         <div class="tagline">Luxury Safe & Loving Home Daycare 👑</div>
+        
+        <div class="contact-banner">
+            <a href="mailto:huda4ever1@gmail.com" class="contact-pill"><i class="fa-solid fa-envelope" style="color:var(--candy-pink);"></i> huda4ever1@gmail.com</a>
+            <a href="tel:2028135994" class="contact-pill"><i class="fa-solid fa-phone" style="color:var(--mint-green);"></i> (202) 813-5994</a>
+        </div>
     </header>
 
     <div class="container">
@@ -528,30 +565,3 @@
                 <div class="schedule-item">
                     <span class="schedule-time">02:00 PM - 03:00 PM</span>
                     <span class="schedule-desc">Early Math, Counting & Shape Recognition</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">03:00 PM - 04:00 PM</span>
-                    <span class="schedule-desc">Creative Painting, Drawing & Fine Motor Arts</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">04:00 PM - 05:00 PM</span>
-                    <span class="schedule-desc">Music, Dancing, Singing & Movement</span>
-                </div>
-                <div class="schedule-item">
-                    <span class="schedule-time">05:00 PM - 06:00 PM</span>
-                    <span class="schedule-desc">Free Discovery Play & Family Pickup Time</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-card" id="contact">
-            <h2>Send Private Message to BBK 💌</h2>
-            <p>Contact BBK to let me receive message and email to my phone and email</p>
-            
-            <form class="contact-form" action="https://formspree.io/f/xvovgzqg" method="POST">
-                <!-- Hidden Contact Data (Email & Phone) -->
-                <input type="hidden" name="_to" value="huda4ever1@gmail.com" class="hidden-contact-data">
-                <input type="hidden" name="Forward_SMS_To" value="2028135994" class="hidden-contact-data">
-                
-                <input type="text" name="Parent_Name" placeholder="Your Fu
