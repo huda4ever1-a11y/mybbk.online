@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBK Home Daycare - Bright Beginnings Kids, Lake Ridge VA</title>
     
-    <!-- Google Fonts & FontAwesome Icons -->
+    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* ==========================================================================
+           1. CORE VARIABLES & REETS
+           ========================================================================== */
         :root {
             --primary-red: #FF5964;
             --secondary-yellow: #FFAD05;
@@ -43,11 +46,13 @@
             padding: 20px;
         }
 
-        /* --- Top Navigation --- */
+        /* ==========================================================================
+           2. NAVIGATION BAR
+           ========================================================================== */
         .top-nav {
             background-color: var(--nav-bg);
-            padding: 10px 0;
-            border-bottom: 2px solid #ddd;
+            padding: 12px 0;
+            border-bottom: 2px solid #D0E8FF;
         }
 
         .nav-wrapper {
@@ -90,39 +95,39 @@
         .contact-btn {
             background-color: var(--primary-red);
             color: white !important;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 25px;
             font-weight: bold;
             transition: transform 0.3s, background 0.3s;
             display: inline-block;
+            box-shadow: 0 4px 10px rgba(255, 89, 100, 0.3);
         }
 
         .contact-btn:hover {
-            background-color: #e04a54;
+            background-color: #E04A54;
             transform: scale(1.05);
         }
 
         .follow-us {
             text-align: right;
-            padding: 5px 0;
-            color: var(--text-dark);
-            font-size: 0.9rem;
+            padding: 8px 0;
             font-weight: bold;
+            font-size: 0.95rem;
         }
 
-        /* --- Moving Gradient Header & Floating Logo --- */
+        /* ==========================================================================
+           3. HEADER & CARTOON LOGO SECTION
+           ========================================================================== */
         header {
             background: linear-gradient(-45deg, var(--secondary-yellow), var(--primary-red), var(--purple), var(--accent-blue));
             background-size: 400% 400%;
             animation: gradientBG 12s ease infinite;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 45px 20px;
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            position: relative;
         }
 
         @keyframes gradientBG {
@@ -131,18 +136,18 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Floating Logo Animation */
+        /* Cartoon Floating Logo Container */
         .logo-container {
             margin: 0 auto 15px;
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 5px solid var(--accent-blue);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border: 6px solid var(--accent-blue);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
             animation: floatLogo 3.5s ease-in-out infinite;
         }
 
@@ -151,65 +156,63 @@
             50% { transform: translateY(-12px) rotate(3deg); }
         }
 
-        .bbk-logo-svg {
-            width: 90%;
+        .cartoon-logo-svg {
+            width: 85%;
             height: auto;
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             background: rgba(255, 255, 255, 0.25);
             display: inline-block;
-            padding: 10px 30px;
+            padding: 10px 25px;
             border-radius: 30px;
             backdrop-filter: blur(8px);
             font-weight: 700;
             font-family: 'Fredoka', cursive;
             margin-top: 10px;
-            animation: pulseSub 3s infinite alternate;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        @keyframes pulseSub {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.03); }
-        }
-
-        /* --- Hero Section --- */
+        /* ==========================================================================
+           4. HERO BANNER
+           ========================================================================== */
         .hero-banner {
             background-color: white;
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 40px;
             text-align: center;
             margin: 40px 0;
             border: 4px dashed var(--purple);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
 
         .hero-banner h2 {
             font-family: 'Fredoka', cursive;
             color: var(--primary-red);
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            font-size: 2.3rem;
+            margin-bottom: 12px;
         }
 
         .hero-banner p {
             color: var(--text-dark);
-            max-width: 600px;
-            margin: 0 auto 20px;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-size: 1.1rem;
             font-weight: 500;
         }
 
         .start-btn {
             background-color: var(--secondary-yellow);
             color: var(--text-dark);
-            padding: 15px 30px;
-            border-radius: 25px;
+            padding: 15px 35px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 800;
             font-size: 1.2rem;
             display: inline-block;
-            transition: transform 0.3s;
-            animation: bounceBtn 2s infinite;
+            box-shadow: 0 5px 15px rgba(255, 173, 5, 0.4);
+            animation: bounceBtn 2.5s infinite;
         }
 
         @keyframes bounceBtn {
@@ -218,7 +221,9 @@
             60% { transform: translateY(-4px); }
         }
 
-        /* --- Animated Cartoon Gallery --- */
+        /* ==========================================================================
+           5. CARTOON DANCING GALLERY
+           ========================================================================== */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -230,32 +235,34 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: all 0.4s ease;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+            border: 3px solid #F0F0F0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.12);
+            border-color: var(--accent-blue);
         }
 
-        /* Dancing picture animation on hover */
         .gallery-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-bottom: 5px solid var(--accent-blue);
-            transition: transform 0.5s ease;
+            border-bottom: 4px solid var(--accent-blue);
+            transition: transform 0.4s ease;
         }
 
+        /* Dancing picture animation when hovering over card */
         .gallery-card:hover img {
             animation: dancePic 1.2s ease-in-out infinite alternate;
         }
 
         @keyframes dancePic {
             0% { transform: scale(1.05) rotate(0deg); }
-            25% { transform: scale(1.08) rotate(-2deg); }
-            75% { transform: scale(1.08) rotate(2deg); }
+            30% { transform: scale(1.08) rotate(-3deg); }
+            70% { transform: scale(1.08) rotate(3deg); }
             100% { transform: scale(1.05) rotate(0deg); }
         }
 
@@ -266,7 +273,7 @@
 
         .gallery-content h3 {
             font-family: 'Fredoka', cursive;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--text-dark);
             margin-bottom: 8px;
         }
@@ -276,7 +283,9 @@
             font-size: 0.95rem;
         }
 
-        /* --- Animated Schedule Table & Icons --- */
+        /* ==========================================================================
+           6. SCHEDULE TABLE & ANIMATED ICONS
+           ========================================================================== */
         .schedule-section {
             background: white;
             padding: 40px;
@@ -293,46 +302,48 @@
             margin-bottom: 30px;
         }
 
+        .schedule-table-wrapper {
+            overflow-x: auto;
+        }
+
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
-            overflow: hidden;
             border-radius: 15px;
+            overflow: hidden;
         }
 
         .schedule-table th, .schedule-table td {
-            padding: 20px;
+            padding: 18px 12px;
             text-align: center;
         }
 
         .schedule-table th {
             background-color: var(--accent-blue);
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-family: 'Fredoka', cursive;
         }
 
-        .schedule-table th.time-col { background-color: #ddd; color: #555; }
-
-        .schedule-table tr:nth-child(even) {
-            background-color: #F8F9FA;
+        .schedule-table th.time-col { 
+            background-color: #E2E8F0; 
+            color: var(--text-dark); 
         }
 
-        .schedule-table tr {
-            transition: background 0.3s;
+        .schedule-table tr:nth-child(even) {
+            background-color: #F8FAFC;
         }
 
         .schedule-table tr:hover {
             background-color: var(--soft-blue);
         }
 
-        /* Animated SVG Icons in Table */
         .schedule-icon {
             display: block;
             margin: 0 auto 10px;
-            max-width: 55px;
+            max-width: 50px;
             height: auto;
-            transition: transform 0.4s ease;
+            transition: transform 0.3s ease;
         }
 
         .schedule-table td:hover .schedule-icon {
@@ -341,21 +352,24 @@
 
         @keyframes spinWiggle {
             0% { transform: scale(1) rotate(0deg); }
-            30% { transform: scale(1.2) rotate(-10deg); }
-            60% { transform: scale(1.2) rotate(10deg); }
+            30% { transform: scale(1.2) rotate(-12deg); }
+            60% { transform: scale(1.2) rotate(12deg); }
             100% { transform: scale(1) rotate(0deg); }
         }
 
         .time-badge {
             background: var(--secondary-yellow);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
+            color: var(--text-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
             font-weight: 800;
             display: inline-block;
+            font-size: 0.9rem;
         }
 
-        /* --- Private Form --- */
+        /* ==========================================================================
+           7. PRIVATE CONTACT FORM
+           ========================================================================== */
         .contact-section {
             background: linear-gradient(-45deg, var(--accent-blue), var(--purple), var(--primary-red));
             background-size: 300% 300%;
@@ -369,7 +383,7 @@
         .contact-section h2 {
             font-family: 'Fredoka', cursive;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 2.2rem;
         }
 
@@ -381,7 +395,7 @@
         }
 
         .contact-form {
-            max-width: 600px;
+            max-width: 550px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -390,7 +404,7 @@
 
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 15px;
+            padding: 14px 18px;
             border-radius: 15px;
             border: 2px solid transparent;
             font-size: 1rem;
@@ -408,43 +422,47 @@
             background-color: var(--secondary-yellow);
             color: var(--text-dark);
             font-family: 'Fredoka', cursive;
-            font-size: 1.3rem;
-            padding: 15px;
+            font-size: 1.25rem;
+            padding: 14px;
             border: none;
             border-radius: 15px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, background 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .contact-form button:hover {
-            background-color: #e09700;
-            transform: translateY(-3px) scale(1.02);
+            background-color: #E09700;
+            transform: translateY(-2px);
         }
 
-        /* --- Footer --- */
+        /* ==========================================================================
+           8. FOOTER
+           ========================================================================== */
         footer {
             text-align: center;
             padding: 30px;
             color: var(--text-light);
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
+        /* ==========================================================================
+           9. RESPONSIVE MEDIA QUERIES
+           ========================================================================== */
         @media (max-width: 768px) {
-            .nav-wrapper { flex-direction: column; text-align: center; }
-            .main-nav { gap: 10px; margin-bottom: 10px; flex-wrap: wrap; justify-content: center;}
-            .main-nav a, .user-nav a { font-size: 1rem; }
-            .logo-container { width: 120px; height: 120px; }
+            .nav-wrapper { flex-direction: column; text-align: center; gap: 10px; }
+            .main-nav { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .logo-container { width: 130px; height: 130px; }
             .subtitle { font-size: 1.1rem; }
             .hero-banner h2 { font-size: 1.8rem; }
-            .schedule-table th, .schedule-table td { padding: 10px; font-size: 0.85rem; }
+            .schedule-section { padding: 20px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation -->
+    <!-- Navigation Bar -->
     <nav class="top-nav">
         <div class="container nav-wrapper">
             <ul class="main-nav">
@@ -461,29 +479,46 @@
     </nav>
     <div class="container follow-us">Follow Us 🌈</div>
 
-    <!-- Header Section with Floating Logo -->
+    <!-- Header & Animated Cartoon Logo -->
     <header>
         <div class="logo-container">
-            <!-- Digital SVG BBK Logo -->
-            <svg class="bbk-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="40" fill="#FFAD05"/>
-                <path d="M50 0 L55 10 L45 10 Z" fill="#FF5964"/>
-                <path d="M50 100 L55 90 L45 90 Z" fill="#35A7FF"/>
-                <path d="M0 50 L10 55 L10 45 Z" fill="#9B51E0"/>
-                <path d="M100 50 L90 55 L90 45 Z" fill="#27AE60"/>
-                <circle cx="50" cy="50" r="30" fill="#FFAD05" stroke="white" stroke-width="2"/>
-                <circle cx="40" cy="45" r="4" fill="#2C3E50"/>
-                <circle cx="60" cy="45" r="4" fill="#2C3E50"/>
-                <path d="M35 60 Q50 70 65 60" fill="none" stroke="#2C3E50" stroke-width="3" stroke-linecap="round"/>
-                <g transform="translate(65, 30) scale(0.4)">
-                    <circle cx="50" cy="25" r="20" fill="#EBF5FF" stroke="#35A7FF" stroke-width="3"/>
-                    <path d="M50 45 L50 90" fill="none" stroke="#35A7FF" stroke-width="3"/>
-                    <path d="M30 60 L70 60" fill="none" stroke="#35A7FF" stroke-width="3"/>
-                    <path d="M50 90 L30 110" fill="none" stroke="#35A7FF" stroke-width="3"/>
-                    <path d="M50 90 L70 110" fill="none" stroke="#35A7FF" stroke-width="3"/>
-                    <polygon points="10,5 12,11 18,11 13,15 15,21 10,17 5,21 7,15 2,11 8,11" fill="#35A7FF" transform="translate(15,-5)"/>
-                </g>
-                <text x="50" y="85" text-anchor="middle" font-family="'Fredoka', cursive" font-weight="700" font-size="12px" fill="#2C3E50">BBK</text>
+            <!-- Full Cartoon Character SVG Logo -->
+            <svg class="cartoon-logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background Glow Ring -->
+                <circle cx="60" cy="60" r="50" fill="#FFAD05"/>
+                
+                <!-- Decorative Cartoon Stars & Dots -->
+                <polygon points="20,25 23,31 29,31 24,35 26,41 20,37 14,41 16,35 11,31 17,31" fill="#35A7FF"/>
+                <polygon points="100,25 103,31 109,31 104,35 106,41 100,37 94,41 96,35 91,31 97,31" fill="#FF5964"/>
+                <circle cx="25" cy="85" r="5" fill="#9B51E0"/>
+                <circle cx="95" cy="85" r="5" fill="#27AE60"/>
+                
+                <!-- Cartoon Face / Head -->
+                <circle cx="60" cy="65" r="32" fill="#FFE0BD"/>
+                <circle cx="60" cy="65" r="32" fill="none" stroke="#2C3E50" stroke-width="3"/>
+                
+                <!-- Crown -->
+                <path d="M42 42 L46 26 L60 35 L74 26 L78 42 Z" fill="#FFAD05" stroke="#2C3E50" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="46" cy="26" r="3" fill="#FF5964"/>
+                <circle cx="60" cy="35" r="3" fill="#35A7FF"/>
+                <circle cx="74" cy="26" r="3" fill="#9B51E0"/>
+                
+                <!-- Big Expressive Cartoon Eyes -->
+                <ellipse cx="48" cy="62" rx="5" ry="7" fill="#2C3E50"/>
+                <ellipse cx="72" cy="62" rx="5" ry="7" fill="#2C3E50"/>
+                <circle cx="46" cy="60" r="2" fill="white"/>
+                <circle cx="70" cy="60" r="2" fill="white"/>
+                
+                <!-- Cheeks -->
+                <circle cx="40" cy="68" r="4" fill="#FF5964" opacity="0.5"/>
+                <circle cx="80" cy="68" r="4" fill="#FF5964" opacity="0.5"/>
+                
+                <!-- Big Happy Smile -->
+                <path d="M46 72 Q60 85 74 72" fill="none" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round"/>
+                
+                <!-- BBK Text Banner -->
+                <rect x="35" y="94" width="50" height="18" rx="9" fill="#FF5964" stroke="#2C3E50" stroke-width="2"/>
+                <text x="60" y="107" text-anchor="middle" font-family="'Fredoka', cursive" font-weight="700" font-size="11px" fill="white">BBK</text>
             </svg>
         </div>
         <div class="subtitle">Luxury Safe & Loving Home 👑 Lake Ridge VA</div>
@@ -494,38 +529,38 @@
         <!-- Hero Section -->
         <div class="hero-banner">
             <h2>BBK Home Daycare</h2>
-            <p>Enjoy happy, high-quality cartoon moments, safe and truly luxurious for children.</p>
+            <p>Enjoy happy, high-quality cartoon moments — safe, clean, and truly luxurious for your children.</p>
             <a href="#" class="start-btn">Start Now Here</a>
         </div>
 
-        <!-- Cartoon Feature Cards (Animated Images) -->
+        <!-- Cartoon Dancing Gallery Cards -->
         <div class="gallery-grid">
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1620935398285-d85c8e312a0f?auto=format&fit=crop&q=80&w=600" alt="Cartoon teacher and kids in classroom">
+                <img src="https://images.unsplash.com/photo-1620935398285-d85c8e312a0f?auto=format&fit=crop&q=80&w=600" alt="Cartoon teacher and kids learning">
                 <div class="gallery-content">
                     <h3>Bachelor's Degree in Education</h3>
-                    <p>Expert cartoon teachers guiding kids through high-quality cartoon learning.</p>
+                    <p>Expert teachers guiding kids through interactive, creative cartoon-style learning.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1549410972-f67f6b9c9b4e?auto=format&fit=crop&q=80&w=600" alt="Cartoon children reading in cozy corner">
+                <img src="https://images.unsplash.com/photo-1549410972-f67f6b9c9b4e?auto=format&fit=crop&q=80&w=600" alt="Small group reading session">
                 <div class="gallery-content">
                     <h3>Only 4 Kids</h3>
-                    <p>Kids leading reading at the cute small book nook, laughing and sharing.</p>
+                    <p>Small group size ensuring individualized care, reading time, and focused attention.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=600" alt="Cartoon children on colorful playground">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=600" alt="Children on playground">
                 <div class="gallery-content">
-                    <h3>First Aid & CPR</h3>
-                    <p>Beautiful, high-quality certified care in our clean, colorful cartoon playground.</p>
+                    <h3>First Aid & CPR Certified</h3>
+                    <p>Highest safety standards with certified, attentive supervision at all times.</p>
                 </div>
             </div>
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600" alt="Cozy cartoon Montessori corner">
+                <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&q=80&w=600" alt="Montessori activity area">
                 <div class="gallery-content">
                     <h3>Montessori + Joyful Learning</h3>
-                    <p>High-quality learners in a cozy, clean and colorful cartoon play area.</p>
+                    <p>A warm, cozy environment designed to spark curiosity and build independence.</p>
                 </div>
             </div>
         </div>
@@ -533,49 +568,5 @@
         <!-- Schedule Table -->
         <div class="schedule-section">
             <h2 class="schedule-title">BBK Daily Learning Journey</h2>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th class="time-col">Times</th>
-                        <th>01:00 PM – 02:00 PM</th>
-                        <th>02:00 PM – 03:00 PM</th>
-                        <th>03:00 PM – 04:00 PM</th>
-                        <th>04:00 PM – 05:00 PM</th>
-                        <th>05:00 PM – 06:00 PM</th>
-                        <th>06:00 PM – 07:00 PM</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Activity Type</td>
-                        <td>
-                            <svg class="schedule-icon" viewBox="0 0 100 100" fill="#FFAD05">
-                                <circle cx="50" cy="50" r="40"/>
-                                <path d="M50 20 L60 80" stroke="white" stroke-width="4"/>
-                                <path d="M20 50 L80 50" stroke="white" stroke-width="4"/>
-                            </svg>
-                            Morning Circle & Story
-                        </td>
-                        <td>
-                            <svg class="schedule-icon" viewBox="0 0 100 100" fill="#9B51E0">
-                                <rect x="20" y="20" width="60" height="60"/>
-                                <circle cx="50" cy="50" r="15" fill="white"/>
-                            </svg>
-                            Montessori Discovery
-                        </td>
-                        <td>
-                            <svg class="schedule-icon" viewBox="0 0 100 100" fill="#FF5964">
-                                <path d="M20,80 L50,20 L80,80 Z"/>
-                                <path d="M20,80 Q50,60 80,80" fill="white"/>
-                            </svg>
-                            Fine Motor Arts
-                        </td>
-                        <td>
-                            <svg class="schedule-icon" viewBox="0 0 100 100" fill="#27AE60">
-                                <path d="M50 10 A40 40 0 1 0 50 90 Z"/>
-                                <path d="M50 10 L50 90" stroke="white" stroke-width="4"/>
-                            </svg>
-                            Outdoor Garden Play
-                        </td>
-                        <td>
-                            <svg clas
+            <div class="schedule-table-wrapper">
+                <table class="sch
