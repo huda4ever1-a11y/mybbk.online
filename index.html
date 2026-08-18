@@ -1,107 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BBK Home Daycare | Best Daycare Lake Ridge VA 7AM-6PM</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Segoe UI',Arial;
-  background:#FFF8E1;
-  color:#333;
-  line-height:1.6
-}
-.hero{
-  background:linear-gradient(135deg,#FF8A80,#FFD54F,#81C784,#64B5F6);
-  padding:45px 20px;
-  text-align:center;
-  color:white
-}
-.logo{
-  width:190px;height:190px;
-  background:white;
-  border-radius:50%;
-  margin:0 auto 18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:8px solid white;
-  box-shadow:0 15px 40px rgba(0,0,0,.3)
-}
-.logo img{width:88%;border-radius:50%}
-h1{font-size:60px;text-shadow:0 4px 15px rgba(0,0,0,.3)}
-h1 span{color:#FFF176;display:block;font-size:36px}
-.tag{
-  background:rgba(0,0,0,.3);
-  padding:14px 28px;
-  border-radius:50px;
-  display:inline-block;
-  margin:18px 0;
-  font-size:19px
-}
-.hours{
-  background:#4D96FF;
-  color:white;
-  padding:12px 26px;
-  border-radius:50px;
-  display:inline-block;
-  font-weight:bold;
-  font-size:18px
-}
-.badges span{
-  background:white;
-  color:#333;
-  padding:11px 22px;
-  border-radius:30px;
-  margin:6px;
-  display:inline-block;
-  font-weight:bold
-}
-.container{max-width:900px;margin:0 auto;padding:0 20px 40px}
-.box{
-  background:white;
-  border-radius:30px;
-  padding:32px;
-  margin:28px 0;
-  box-shadow:0 10px 35px rgba(0,0,0,.12)
-}
-.box h2{color:#FF6B6B;text-align:center;font-size:32px;margin-bottom:16px}
-.contact{
-  background:linear-gradient(135deg,#4D96FF,#6BCB77);
-  color:white;
-  border-radius:28px;
-  padding:32px;
-  text-align:center
-}
-.contact a{color:white;text-decoration:none;font-size:22px;display:block;margin:12px 0;font-weight:bold}
-.btn{
-  background:white;
-  color:#4D96FF;
-  padding:14px 30px;
-  border-radius:50px;
-  display:inline-block;
-  margin:8px;
-  text-decoration:none;
-  font-weight:bold
-}
-.card{padding:18px;border-radius:18px;margin:12px 0;background:#FFF8E1;border-left:6px solid #FFD93D}
-.card.blue{background:#E3F2FD;border-color:#4D96FF}
-.card.green{background:#E8F5E9;border-color:#6BCB77}
-.card.pink{background:#FCE4EC;border-color:#FF6B6B}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fun{padding:20px;border-radius:20px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.1)}
-.ad{ background:linear-gradient(135deg,#FFF176,#FF8A80); padding:24px; border-radius:22px; text-align:center; margin:20px 0; border:3px dashed #FF6B6B }
-table{width:100%;border-collapse:collapse;margin:15px 0}
-th{background:#FF6B6B;color:white;padding:13px}
-td{padding:12px;border-bottom:1px solid #eee;text-align:center}
-input,textarea,select{width:100%;padding:16px;margin:9px 0;border-radius:14px;border:2px solid #eee}
-button{background:linear-gradient(90deg,#FFD93D,#FF6B6B);color:white;padding:18px;border:none;border-radius:30px;font-size:19px;font-weight:bold;width:100%;cursor:pointer}
-footer{background:#222;color:white;text-align:center;padding:35px}
-@media(max-width:650px){.grid2{grid-template-columns:1fr} h1{font-size:46px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BBK Home Daycare — quality home daycare in Lake Ridge, VA. Open 7AM–6PM.">
+  <title>BBK Home Daycare | Best Daycare Lake Ridge VA 7AM-6PM</title>
+
+  <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #FFF8E1;
+      color: #222;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layout */
+    a { color: inherit; }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: #000;
+      color: #fff;
+      border-radius: 4px;
+      z-index: 9999;
+    }
+
+    .hero {
+      background: linear-gradient(135deg,#FF8A80,#FFD54F,#81C784,#64B5F6);
+      padding: 45px 20px;
+      text-align: center;
+      color: white;
+    }
+    .logo {
+      width: 190px;
+      height: 190px;
+      background: white;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 8px solid white;
+      box-shadow: 0 15px 40px rgba(0,0,0,.25);
+      overflow: hidden;
+    }
+    .logo img {
+      width: 88%;
+      height: auto;
+      border-radius: 50%;
+      display: block;
+    }
+
+    h1 { font-size: 48px; text-shadow: 0 4px 15px rgba(0,0,0,.25); line-height: 1.05; }
+    h1 .tagline { color: #FFF176; display: block; font-size: 24px; margin-top: 6px; }
+
+    .tag {
+      background: rgba(0,0,0,.25);
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 12px 0;
+      font-size: 16px;
+    }
+    .hours {
+      background: #4D96FF;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 16px;
+      margin-left: 8px;
+    }
+
+    .badges span {
+      background: white;
+      color: #333;
+      padding: 9px 16px;
+      border-radius: 30px;
+      margin: 6px;
+      display: inline-block;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .container { max-width: 940px; margin: 0 auto; padding: 20px; }
+    .box {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      margin: 20px 0;
+      box-shadow: 0 8px 28px rgba(0,0,0,.10);
+    }
+    .box h2 { color: #FF6B6B; text-align: center; font-size: 26px; margin-bottom: 12px; }
+
+    .contact {
+      background: linear-gradient(135deg,#4D96FF,#6BCB77);
+      color: white;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+    }
+    .contact a { color: white; text-decoration: none; font-size: 18px; display: block; margin: 8px 0; font-weight: 700; }
+
+    .btn {
+      background: white;
+      color: #4D96FF;
+      padding: 12px 20px;
+      border-radius: 40px;
+      display: inline-block;
+      margin: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    .card { padding: 14px; border-radius: 12px; margin: 12px 0; background: #FFF8E1; border-left: 6px solid #FFD93D; }
+    .card.blue { background: #E3F2FD; border-color: #4D96FF; }
+    .card.green { background: #E8F5E9; border-color: #6BCB77; }
+    .card.pink { background: #FCE4EC; border-color: #FF6B6B; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fun { padding: 16px; border-radius: 12px; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+
+    .ad {
+      background: linear-gradient(135deg,#FFF176,#FF8A80);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 18px 0;
+      border: 3px dashed #FF6B6B;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    th { background: #FF6B6B; color: white; padding: 10px; text-align: center; }
+    td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
+
+    input, textarea, select { width: 100%; padding: 12px; margin: 8px 0; border-radius: 10px; border: 2px solid #eee; font-size: 15px; }
+    button[type="submit"] {
+      background: linear-gradient(90deg,#FFD93D,#FF6B6B);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    footer { background: #222; color: white; text-align: center; padding: 24px; margin-top: 12px; border-radius: 8px; }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .grid2 { grid-template-columns: 1fr; }
+      h1 { font-size: 36px; }
+      .logo { width: 140px; height: 140px; }
+    }
+  </style>
 </head>
 <body>
-<div class="hero">
-  <div class="logo"><img src="logo.png" alt="BBK Logo"></div>
-  <h1>BBK <span>HOME DAYCARE</span></h1
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero" role="banner">
+    <div class="logo" aria-hidden="false">
+      <!-- Replace logo.png with your real logo file. Keep the alt meaningful. -->
+      <img src="logo.png" alt="BBK Home Daycare logo">
+    </div>
+
+    <h1>BBK <span class="tagline">HOME DAYCARE</span></h1>
+    <div class="badges" aria-hidden="true">
+      <span>Safe • Caring • Licensed</span>
+    </div>
+    <div style="margin-top:12px;">
+      <span class="tag" aria-hidden="true">Family-focused care in Lake Ridge, VA</span>
+      <span class="hours" aria-label="Hours open seven AM to six PM">7AM — 6PM</span>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main" aria-labelledby="services-heading">
+    <section class="box" aria-labelledby="services-heading">
+      <h2 id="services-heading">Our Services</h2>
+      <div class="grid2" role="list">
+        <article class="card blue" role="listitem" aria-labelledby="early-id">
+          <h3 id="early-id" style="font-size:18px;margin-bottom:6px;">Early Learning</h3>
+          <p>Age-appropriate activities, reading, play-based learning, and socialization.</p>
+        </article>
+
+        <article class="card green" role="listitem" aria-labelledby="meals-id">
+          <h3 id="meals-id" style="font-size:18px;margin-bottom:6px;">Healthy Meals</h3>
+          <p>Nutritious snacks and meals (or assist with meal plans per family requests).</p>
+        </article>
+
+        <article class="card pink" role="listitem" aria-labelledby="safety-id">
+          <h3 id="safety-id" style="font-size:18px;margin-bottom:6px;">Safety & Care</h3>
+          <p>CPR-certified caregivers, secure facility, and structured routines.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="play-id">
+          <h3 id="play-id" style="font-size:18px;margin-bottom:6px;">Play & Development</h3>
+          <p>Creative crafts, outdoor time, sensory play, and motor skill development.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="box" aria-labelledby="enroll-heading">
+      <h2 id="enroll-heading">Enrollment & Rates</h2>
+      <p style="text-align:center; margin-bottom:12px;">Open full-time and part-time spots. Contact for availability and pricing.</p>
+
+      <div class="ad" role="note">
+        <strong>Special:</strong> First week trial available — contact for details.
+      </div>
+
+      <table role="table" aria-describedby="rates-desc">
+        <caption id="rates-desc" style="caption-side: top; text-align:left; padding-bottom:6px;">Sample rates (subject to change)</caption>
+        <thead>
+          <tr><th scope="col">Program</th><th scope="col">Weekly</th><th scope="col">Hours</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Infants</td><td>$350</td><td>7AM–5PM</td></tr>
+          <tr><td>Toddlers</td><td>$300</td><td>7AM–5PM</td></tr>
+          <tr><td>Preschool</td><td>$275</td><td>8AM–3PM</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="box contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact & Visit</h2>
+      <p>If you'd like to schedule a visit or ask about enrollment, please contact us:</p>
+      <a href="tel:+17035551234" aria-label="Call BBK Home Daycare">Call: (703) 555-1234</a>
+      <a href="mailto:info@bbkdaycare.example" aria-label="Email BBK Home Daycare">Email: info@bbkdaycare.example</a>
+
+      <form aria-label="Contact form" action="#" method="post" style="margin-top:14px; max-width:560px; margin-left:auto; margin-right:auto;">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required placeholder="Full name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="your@email.com">
+
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" placeholder="(703) 555-1234">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="container" aria-label="Footer">
+    <div class="box" style="background:transparent; box-shadow:none; padding:0;">
+      <p style="color:#ddd; margin-bottom:6px;">© <span id="year"></span> BBK Home Daycare — Lake Ridge, VA</p>
+      <p style="color:#ddd; font-size:13px;">Licensed & insured. Hours: 7AM–6PM. Address & directions available on request.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small enhancement: sets current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Note: For GitHub Pages you may want to remove inline scripts if using strict CSP.
+  </script>
+</body>
+</html>
